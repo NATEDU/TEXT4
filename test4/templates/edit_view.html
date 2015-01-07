@@ -1,0 +1,8 @@
+<form action="/edit/{{c.id}}" method="POST">
+{%csrf_token%}
+
+<input type="text" name="name" value="{{c.name}}" />
+<input type="text" name="address" value="{{c.address}}" />
+</p><textarea name="content" value="{{c.content}}"></textarea>
+<button>send</button>	
+</form>

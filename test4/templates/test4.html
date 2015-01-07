@@ -1,0 +1,27 @@
+<meta charset='utf-8'>
+
+<head><!-- CDN hosted by Cachefly -->
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
+</head>
+
+<h1>wow</h1>
+{{time}}
+</p><img src="/static/logo.jpg" style="width:80ps;height:40px;">
+</p><img src="/media/{{i.img}}" style="width:100ps;height:60px;">
+</p><img src="/media/{{sina}}" style="width:120ps;height:80px;">
+{%for x in c%}
+</p>{{x.id}}---{{x.name}}---{{x.address}}
+<div>{{a.content|safe}}</div>
+{%endfor%}
+
+<form action="/new" method="POST">
+{%csrf_token%}
+
+<input type="text" name="name"/>
+<input type="text" name="address"/>
+</p><textarea name="content"></textarea>
+<button>send</button>	
+</form>
+
+
